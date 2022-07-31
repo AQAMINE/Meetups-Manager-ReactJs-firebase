@@ -1,5 +1,30 @@
 # Getting Started with Create React App
 
+1. You must install nodejs from https://nodejs.org/en/
+2. Run "npm install" in the extracted project folder to install all required dependencies => This will create a node_modules folder which is missing
+3. Run "npm start" to bring up the development server, view the app at localhost:8080 (or whichever port is shown in your terminal)
+🤞🏼🤞🏼#Run "npm run lint" Lints and fixes files
+
+### ⚙️ Firebase Realtime Database rules ⚙️
+```
+
+{
+  "rules": {
+    "coaches":{
+      ".read": true,
+      ".write": "auth != null"
+    },
+    "requests":{
+      ".read": "auth != null",
+      ".write": true
+    },
+    //".read": "now < 1653001200000",  // 2022-5-20
+    //".write": "now < 1653001200000",  // 2022-5-20
+  }
+}
+```
+<img src="https://repository-images.githubusercontent.com/516564677/8b17e5fb-2d68-4201-8c4f-f0391b134170"/>
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
